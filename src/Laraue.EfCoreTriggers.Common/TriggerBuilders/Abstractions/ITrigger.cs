@@ -33,5 +33,7 @@ namespace Laraue.EfCoreTriggers.Common.TriggerBuilders.Abstractions
         /// Trigger name.
         /// </summary>
         string Name { get; }
+
+        string AdditionalName { get; set; }
     }
 }
