@@ -26,6 +26,9 @@ namespace Laraue.EfCoreTriggers.Common.TriggerBuilders
         /// <inheritdoc />
         public string Name { get; private set; }
 
+        public string AdditionalName { get; set; }
+
+
         /// <summary>
         /// Initializes a new instance of <see cref="Trigger{TTriggerEntity,TTriggerEntityRefs}"/>.
         /// </summary>
@@ -36,7 +39,7 @@ namespace Laraue.EfCoreTriggers.Common.TriggerBuilders
             TriggerTime = triggerTime;
             TriggerEvent = triggerEvent;
 
-            Name = $"{Constants.AnnotationKey}_{TriggerTime}_{TriggerEvent}_{typeof(TTriggerEntity).Name}"
+            Name = $"{Constants.AnnotationKey}_{TriggerTime}_{TriggerEvent}_{typeof(TTriggerEntity).Name}_{AdditionalName}"
                 .ToUpper();
         }
 
